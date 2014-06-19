@@ -4,6 +4,9 @@ body {
   background-color: black;
 }
 
+*{
+  outline: red 1px solid;
+}
 .main {
   background-color: white;
   margin-top: 110px;
