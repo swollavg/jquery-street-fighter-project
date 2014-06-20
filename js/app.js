@@ -60,7 +60,11 @@ $(document).keydown(function(event){
 			$('.ryu-throwing').hide();
 	        $('.ryu-still').show();
 	    }
-	})
+	});
+
+	$('.main').animate({
+		'opacity': '1',
+	}, 3000);
 	
 });
 
