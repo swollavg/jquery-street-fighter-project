@@ -9,7 +9,10 @@
   <script src="js/app.js"></script>
 </head>
 <body>
-  <div class="main">
+  <div id="vs"><span class="intro">Press the space bar to continue</span>
+  </div>
+  
+  <div id="main" class="clearfix">
     <div id="health-bar-wrapper" class="clearfix">
       <div class="health-bar-left">
         <span class="remain"></span>
@@ -18,7 +21,7 @@
       <div class="health-bar-right">
         <span class="remain2"></span>
       </div>
-      <br style="clear:both;">
+      <br class="clear">
         <p class="names ryu-name">Ryu</p>
         <p class="names time">30</p>
         <p class="names guile-name">Guile</p>
@@ -30,7 +33,14 @@
       <div class="ryu-cool"></div>
     </div>
     <div class="hadouken"></div>
+    
+    <div class="guile-gif"></div>
+    <div class="logo"></div>
+    <br class="clear">
+    <div class="instructions"><p>Guile has been flirting with Ryu's main<br> lady(Chun-Lee) and is out for blood </p></div>
   </div>
+
+
   <audio id="hadouken-sound" src="sound/hadouken.mp3">
 </body>
 </html>

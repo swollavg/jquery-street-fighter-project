@@ -62,11 +62,24 @@ $(document).keydown(function(event){
 	    }
 	});
 
-	$('.main').animate({
-		'opacity': '1',
-	}, 3000);
+	$(document).keydown(function(event){
+		if (event.which == 32) {
+		$('#vs').addClass('vs-transition');
+		}
+	});
+
+	$('#vs').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
+    
+	$('.logo').fadeIn(1800, function(){
+		$('.instructions').fadeIn(1800).delay(2000).fadeOut(1800, function(){
+			$(this).text("Hover over Ryu to see him in action").text("Test")
+			.text("Click on Ryu and he will Hadouken!!")
+			.text("Press and hold X and he will pose for you!");
+      });
+	});
+  }); //End on on transitionEnd
 	
-});
+}); // end of document handler
 
 function playHadouken() {
 	$('#hadouken-sound')[0].volume = 0.5;

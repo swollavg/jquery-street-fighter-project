@@ -10,7 +10,7 @@
 
 }
 
-body {
+body, html {
   background-color: black;
 }
 
@@ -21,6 +21,10 @@ body {
   content: "";
 }
 
+.clear {
+  clear: both;
+}
+
 
 * {
   -moz-box-sizing: border-box; 
@@ -28,14 +32,16 @@ body {
   box-sizing: border-box;
 }
 
-.main {
-  background-image: url('../images/airforce.jpg');
+#main {
+  background-image: url('../images/background-japan.gif');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  opacity: 0;
   min-width: 1200px;
-  height: 600px;
-  margin-top: 110px;
+  /*height: 643px;*/
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  /*margin-top: 110px; */
   /*padding-left: 100px; */
 }
 
@@ -43,7 +49,6 @@ body {
   width: 1100px;
   display: block;
   height: 130px;
-  border: 1px solid black;
   margin: 0 auto;
 }
 
@@ -65,7 +70,7 @@ body {
   margin-top: 40px;
   border-radius: 4px;
   background-color: #F8F500;
-  padding-left: 100px;
+  padding-right: 200px;
   -webkit-box-shadow: 6px 10px 38px -2px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 10px 38px -2px rgba(0,0,0,0.75);
 box-shadow: 6px 10px 38px -2px rgba(0,0,0,0.75);
@@ -120,7 +125,7 @@ color: #000;
 }
 
 
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .vs, .logo, .guile-gif {
   background-repeat: no-repeat;
 }
   
@@ -162,4 +167,55 @@ color: #000;
 
 .ryu-cool {
   background-image: url('../images/ryu-cool.gif');
+}
+
+.logo {
+  background-image: url('../images/street-logo.png');
+  width: 440px;
+  height: 320px;
+  position: relative;
+  left: 410px;
+  display: none;
+}
+
+.guile-gif {
+  background-image: url('../images/guile.gif');
+  width: 315px;
+  height: 480px;
+  float: right;
+  margin-right: 110px;
+}
+
+#vs {
+  background: url('../images/vs.jpg') center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  color: white;
+  font-size: 400%;
+}
+
+.intro {
+  position: relative;
+  top: 500px;
+  left: 300px;
+}
+
+#vs.vs-transition {
+  opacity: 0;
+  height: 0;
+  transition: opacity 2s ease-out 1s, height 0 linear 2s;
+}
+
+.instructions {
+display: none;
+position: absolute;
+left: 400px;
+bottom: 200px;
+font-size: 200%;
+color: black;
+line-height: 1.2;
 }
