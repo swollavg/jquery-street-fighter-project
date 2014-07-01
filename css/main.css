@@ -12,6 +12,7 @@
 
 body, html {
   background-color: black;
+  height: 100%;
 }
 
 .clearfix:after {
@@ -32,17 +33,17 @@ body, html {
   box-sizing: border-box;
 }
 
+
+
 #main {
   background-image: url('../images/background-japan.gif');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  min-width: 1200px;
-  /*height: 643px;*/
+  width: 1400px;
   position: absolute;
-  width: 100%;
-  min-height: 100%;
-  /*margin-top: 110px; */
-  /*padding-left: 100px; */
+  height: 650px;
+
+
 }
 
 #health-bar-wrapper {
@@ -190,12 +191,13 @@ color: #000;
   background: url('../images/vs.jpg') center no-repeat;
   background-size: 100% 100%;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 1400px;
+  height: 650px;
   opacity: 1;
   z-index: 1;
   color: white;
   font-size: 400%;
+
 }
 
 .intro {
@@ -205,9 +207,9 @@ color: #000;
 }
 
 #vs.vs-transition {
-  opacity: 0;
+ opacity: 0;
   height: 0;
-  transition: opacity 2s ease-out 1s, height 0 linear 2s;
+  transition: all 2s ease-out 0s;
 }
 
 .instructions {
@@ -219,3 +221,5 @@ font-size: 200%;
 color: black;
 line-height: 1.2;
 }
+
+
