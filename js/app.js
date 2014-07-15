@@ -74,27 +74,25 @@ $(document).keydown(function(event){
 	    }
 	});
 
-// Fades out hte VS page.
+// Fades out the VS page.
 
-	
-$(document).keydown(function(event){
-       if (event.which == 32) {
-              $('#vs').fadeOut();
-}
-});
-
+	$(document).keydown(function(event){
+		if (event.which == 32) {
+		$('#vs').addClass('vs-transition');
+		}
+	});
 
     // define variable to reuse
 	var instruction = $('.instructions p')
 
 	// The text instructions don't start until the VS page fade out.
 
-	
+	$('#vs').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
     
 		// Large collection of nested and method chained fade in/out and text replacements
 
      $('.logo').fadeIn(1800, function(){
-      $('.instructions').delay(2000).fadeIn(1000, function(){
+      $('.instructions').fadeIn(1000, function(){
        $(instruction).delay(1500).fadeOut(1000, function(){
         $(instruction).text("Hover over Ryu to see him in action");
          $(instruction).delay(500).fadeIn(1000, function(){
@@ -114,7 +112,7 @@ $(document).keydown(function(event){
   });
  });
 });
-
+}); //End on on transitionEnd
 
 
 	
